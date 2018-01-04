@@ -3,14 +3,12 @@ package main
 import (
   "gopkg.in/telegram-bot-api.v4"
   "log"
-  // "net/http"
+  "net/http"
   "os"
 )
 
 func main() {
-  port := os.Getenv("WEBHOOK_PORT")
   telegram_token := os.Getenv("TELEGRAM_TOKEN")
-  telegram_server := os.Getenv("TELEGRAM_SERVER")
 
 
   bot, err := tgbotapi.NewBotAPI( telegram_token )
@@ -56,6 +54,8 @@ func main() {
     bot.Send(msg)
   }
   //////////////////////////////////////////////////////////////
+  // port := os.Getenv("WEBHOOK_PORT")
+  // telegram_server := os.Getenv("TELEGRAM_SERVER")
 
 
   // webhook_url := telegram_server + ":" + port + "/"+ bot.Token
