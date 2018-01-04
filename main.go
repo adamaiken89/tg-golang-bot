@@ -28,7 +28,17 @@ func main() {
 
     log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
-    msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
+
+    switch update.Message.Text {
+    case "Hello":
+      reply_content := "Hi ar!"
+    case "Bye":
+      reply_content := "Dun say goodbye la."
+    default:
+      reply_content := "You up what?"
+    }
+
+    msg := tgbotapi.NewMessage(update.Message.Chat.ID, reply_content)
     msg.ReplyToMessageID = update.Message.MessageID
 
     bot.Send(msg)
