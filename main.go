@@ -3,7 +3,7 @@ package main
 import (
   "gopkg.in/telegram-bot-api.v4"
   "log"
-  "net/http"
+  // "net/http"
   "os"
 )
 
