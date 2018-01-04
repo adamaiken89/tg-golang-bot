@@ -1,4 +1,4 @@
-package "golang-bot"
+package main
 
 import (
   "gopkg.in/telegram-bot-api.v4"
