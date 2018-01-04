@@ -1,1 +1,2 @@
+kill: https://api.telegram.org/bot${TELEGRAM_TOKEN}/setWebhook?url=
 web: go run main.go
