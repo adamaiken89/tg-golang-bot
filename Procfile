@@ -1,1 +1,1 @@
-web: tghw
+web: TELEGRAM_TOKEN={TELEGRAM_TOKEN} .\tghw
