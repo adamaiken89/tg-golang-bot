@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-  port := os.Getenv("WEBHOOK_PORT")
+  // port := os.Getenv("WEBHOOK_PORT")
   telegram_token := os.Getenv("TELEGRAM_TOKEN")
-  telegram_server := os.Getenv("TELEGRAM_SERVER")
+  // telegram_server := os.Getenv("TELEGRAM_SERVER")
 
 
   bot, err := tgbotapi.NewBotAPI( telegram_token )
