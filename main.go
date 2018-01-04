@@ -1,25 +1,37 @@
 package main
 
 import (
-  "log"
-  "os"
   "gopkg.in/telegram-bot-api.v4"
+  "log"
+  "net/http"
+  "os"
 )
 
 func main() {
-  bot, err := tgbotapi.NewBotAPI( os.Getenv("TELEGRAM_TOKEN") )
+  port := os.Getenv("PORT")
+  telegram_token := os.Getenv("TELEGRAM_TOKEN")
+  telegram_server := os.Getenv("TELEGRAM_SERVER")
+
+
+  bot, err := tgbotapi.NewBotAPI( telegram_token )
   if err != nil {
     log.Panic(err)
   }
+  webhook_url := telegram_server + ":" + port + "/"+ bot.Token
 
   bot.Debug = true
 
   log.Printf("Authorized on account %s", bot.Self.UserName)
+  log.Printf("Webhook URL %s", webhook_url)
+  
+  
+  _, err = bot.SetWebhook(tgbotapi.NewWebhook(webhook_url) )
+  if err != nil {
+    log.Fatal(err)
+  }
 
-  u := tgbotapi.NewUpdate(0)
-  u.Timeout = 60
-
-  updates, err := bot.GetUpdatesChan(u)
+  updates := bot.ListenForWebhook("/" + bot.Token)
+  go http.ListenAndServe(":" + port, nil)
 
   for update := range updates {
     if update.Message == nil {
@@ -43,4 +55,6 @@ func main() {
 
     bot.Send(msg)
   }
+  ///////////////////////////////////////////////////////////////
+
 }
