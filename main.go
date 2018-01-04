@@ -60,7 +60,7 @@ func main() {
   log.Printf("Authorized on account %s", bot.Self.UserName)
   log.Printf("Webhook URL %s", webhook_url)
   
-  resp, err := http.Get("https://api.telegram.org/bot"+bot.Token+"/setWebhook?url=")
+  _, err := http.Get("https://api.telegram.org/bot"+bot.Token+"/setWebhook?url=")
   if err != nil {
     log.Fatal(err)
   }
