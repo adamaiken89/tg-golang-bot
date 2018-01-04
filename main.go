@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-  port := os.Getenv("PORT")
+  port := os.Getenv("WEBHOOK_PORT")
   telegram_token := os.Getenv("TELEGRAM_TOKEN")
   telegram_server := os.Getenv("TELEGRAM_SERVER")
 
