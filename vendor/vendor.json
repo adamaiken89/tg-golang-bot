@@ -6,6 +6,24 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "3Kx93/EGgHryn92eavMOyby6Voc=",
+			"path": "github.com/daviddengcn/go-colortext",
+			"revision": "17e75f6184bc9e727756cd0d82e0af58b1fc7191",
+			"revisionTime": "2017-11-26T03:42:57Z"
+		},
+		{
+			"checksumSHA1": "lti7jttRllUglFr1cQjC5TF+P3Q=",
+			"path": "github.com/joho/godotenv",
+			"revision": "06e67b5ef3bef2e1a8696e1c04b94b44cbc5d9a5",
+			"revisionTime": "2017-12-22T23:35:39Z"
+		},
+		{
+			"checksumSHA1": "fM2JkN8TbY5HQI5O4JBANszLGA4=",
+			"path": "github.com/mattn/goreman",
+			"revision": "d0ee41b21be92ce6fd3e55ad11c5e5c9452fe822",
+			"revisionTime": "2017-06-16T00:56:59Z"
+		},
+		{
 			"checksumSHA1": "t8jzPFIv4DNACv+cuZoigNmjPLQ=",
 			"path": "github.com/technoweenie/multipartstreamer",
 			"revision": "a90a01d73ae432e2611d178c18367fbaa13e0154",
@@ -20,6 +38,12 @@
 			"path": "gopkg.in/telegram-bot-api.v4",
 			"revision": "2022d04b94f50056a09962b1ac81cdd821d20a55",
 			"revisionTime": "2017-11-09T18:51:50Z"
+		},
+		{
+			"checksumSHA1": "2aNOQBXINl6ZQGpgfYI46Sxxux8=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "c95af922eae69f190717a0b7148960af8c55a072",
+			"revisionTime": "2018-01-02T12:38:42Z"
 		},
 		{
 			"path": "https://github.com/technoweenie/multipartstreamer",
