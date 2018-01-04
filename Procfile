@@ -1,1 +1,1 @@
-web: golang-bot
+worker: golang-bot
