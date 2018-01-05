@@ -45,7 +45,7 @@ func main() {
     case "Bye":
       reply_content = "Dun say goodbye la."
     default:
-      reply_content = "You up what?"
+      reply_content = "What did you say?"
     }
 
     msg := tgbotapi.NewMessage(update.Message.Chat.ID, reply_content)
