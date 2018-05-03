@@ -24,6 +24,9 @@
 #   go-tests = true
 #   unused-packages = true
 
+[metadata.heroku]
+  root-package = "github.com/adamaiken89/tg-golang-bot"
+  go-version = "1.10.2"
 
 [[constraint]]
   name = "gopkg.in/telegram-bot-api.v4"
