@@ -1,6 +1,6 @@
 # tg-golang-bot
 
-My first TG Bot deployed in Heroku.
+My first TG Bot deployed on Heroku.
 
 # Telegram Bot Name: hello_go
 
